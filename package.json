@@ -1,0 +1,66 @@
+{
+  "name": "smart-cod-checkout-pro",
+  "private": true,
+  "scripts": {
+    "build": "remix vite:build",
+    "dev": "shopify app dev",
+    "config:link": "shopify app config link",
+    "generate": "shopify app generate",
+    "deploy": "shopify app deploy",
+    "config:push": "shopify app config push",
+    "env": "shopify app env",
+    "start": "remix-serve ./build/server/index.js",
+    "docker-start": "npm run setup && npm run start",
+    "setup": "prisma generate && prisma migrate deploy",
+    "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
+    "shopify": "shopify",
+    "prisma": "prisma",
+    "graphql-codegen": "graphql-codegen",
+    "vite": "vite"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=18.20"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.13.0",
+    "@remix-run/node": "^2.9.2",
+    "@remix-run/react": "^2.9.2",
+    "@remix-run/serve": "^2.9.2",
+    "@shopify/app-bridge-react": "^4.1.6",
+    "@shopify/polaris": "^12.17.1",
+    "@shopify/shopify-app-remix": "^3.1.0",
+    "@shopify/shopify-app-session-storage-prisma": "^5.0.5",
+    "isbot": "^4.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "vite-tsconfig-paths": "^4.3.2",
+    "nodemailer": "^6.9.13",
+    "twilio": "^5.1.1",
+    "axios": "^1.7.2",
+    "googleapis": "^140.0.0",
+    "node-cron": "^3.0.3",
+    "papaparse": "^5.4.1",
+    "xlsx": "^0.18.5",
+    "bcrypt": "^5.1.1",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^2.9.2",
+    "@shopify/api-codegen-preset": "^1.1.1",
+    "@types/bcrypt": "^5.0.2",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/node": "^18.19.34",
+    "@types/react": "^18.2.79",
+    "@types/react-dom": "^18.2.25",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.2.5",
+    "prisma": "^5.13.0",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11"
+  },
+  "workspaces": [
+    "extensions/*"
+  ]
+}
